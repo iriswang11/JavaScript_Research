@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	line-height: 1.6;
+	color: #333131;
+	font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Roboto', sans-serif;
+}
+
+p,
+ul {
+	margin-bottom: 1.8em;
+}
+
+ul{
+	margin-left: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #063958;
+}
+
+h2,
+h4 {
+	margin-top: 0;
+}
+
+h3 {
+	margin-top: 1em;
+	}
+}
+
+h4 {
+	margin-bottom: .4em;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 1.35em;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.5em;
+}
+
+.main-nav {
+	margin-top: 1.5em;
+	margin-left: 0;
+}
+
+.main-nav li {
+	list-style: none;
+}
+
+.name a,
+.main-nav a {
+	display: block;
+	text-align: center;
+	padding: 5px;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #093a58;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover{
+	color: #bb94a8;
+}
+
+.main-footer a:hover {
+	color: #83576e;
+    font-weight: bold;
+}
+
+/* ---- Layout Containers ---- */
+.container,
+.example-row {
+	width: 90%;
+	margin: auto;
+}
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.hero,
+.banner,
+.main-footer {
+	text-align: center;
+}
+
+.banner {
+	color: #2E4756;
+	background: #DBC2CF;
+	padding: 6em 0;
+	margin-bottom: 60px;
+}
+
+.col {
+	padding-right: 1.8em;
+	padding-left: 1.8em;
+}
+
+.main-footer {
+	background: #DBC2CF;
+	padding: 2em 0;
+	margin-top: 30px;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+	position: relative;
+}
+
+figure a:hover,
+.button:hover,
+.card img:hover {
+	opacity: 0.6;
+}
+
+figcaption {
+	font-size: .8em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;	
+	background: rgb(107, 78, 113, .90);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+.button {
+	color: #fff;
+	text-align: center;
+	padding: .625em 1.25em;
+	background: #6B4E71;
+	border-radius: .35em;
+}
+
+.button-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mb-20 {
+	margin-bottom: 2em;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (max-width: 560px) {
+	.example-row {
+		width: 100%;
+	}
+}
+
+@media (min-width: 560px) {
+
+}
+
+@media (min-width: 560px) and (max-width: 768px) {
+	.container,
+	.example-row {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.border{
+		width: 90%;
+		margin: 3em auto 2em;
+		border-top: 2px solid #DBC2CF;
+	}
+
+	.example-row .card {
+		margin-bottom: 4em;
+	}
+}
+
+
+@media (min-width: 768px) {
+
+	body {
+		padding-top: 68px;
+	}
+
+	.main-header {
+		position: fixed;
+		background: #fff;
+		box-shadow: 0 1px 4px rgba(0,0,0,.4);
+		width: 100%;
+		top: 0;
+		z-index: 1000;
+	}
+
+	.container,
+	.example-row {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.primary,
+	.secondary {
+		width: 50%;
+	}
+
+	.tertiary,
+	.example-row {
+		border-top: 2px solid #DBC2CF;
+		margin-top: 2em;
+		padding-top: 2em;
+	}
+
+	.example-row,
+	.container,
+	.header-flex,
+	.main-nav {
+		display: flex;
+	}
+
+	.header-flex {
+		justify-content: right;
+	}
+
+	.name {
+		margin-right: auto;
+	}
+
+	.container {
+		flex-wrap: wrap;
+	}
+
+	.example-row {
+		justify-content: center;
+	}
+
+	.example-row .card {
+		flex-direction: column;
+		width: 30%;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		margin: 2em 1em;
+	}
+
+	.main-nav li {
+		margin-left: 15px;
+	}
+
+	.tagline {
+		font-size: 1.4em;
+	}
+
+	.button-center {
+		display: none;
+	}
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+@media (min-width: 1025px) {
+	
+	.container,
+	.example-row {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary,
+	.tertiary {
+		width: 30%;
+	}
+
+	.tertiary {
+		border: none;
+		margin-top: 0;
+		padding-top: 0;
+	}
+
+	.col {
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+}
